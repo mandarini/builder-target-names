@@ -25,6 +25,8 @@
       "@myorg/jsltsc2": ["js-libs/jsltsc2/src/index.ts"],
       "@myorg/jslv1": ["js-libs/jslv1/src/index.ts"],
       "@myorg/jslv2": ["js-libs/jslv2/src/index.ts"],
+      "@myorg/nglib1": ["nglib1/src/index.ts"],
+      "@myorg/nglib2": ["nglib2/src/index.ts"],
       "@myorg/rlrb1": ["rlrb1/src/index.ts"],
       "@myorg/rlrb2": ["rlrb2/src/index.ts"],
       "@myorg/rlrswc1": ["rlrswc1/src/index.ts"],

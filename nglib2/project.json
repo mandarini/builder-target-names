@@ -1,0 +1,51 @@
+{
+  "name": "nglib2",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "nglib2/src",
+  "prefix": "reactlibsimports",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "nglib2/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "nglib2/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "nglib2/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "nglib2/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "nglib2/**/*.ts",
+          "nglib2/**/*.html",
+          "nglib2/package.json"
+        ]
+      }
+    }
+  }
+}
