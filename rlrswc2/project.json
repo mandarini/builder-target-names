@@ -12,7 +12,7 @@
         "lintFilePatterns": ["rlrswc2/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "build": {
+    "my-build": {
       "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {

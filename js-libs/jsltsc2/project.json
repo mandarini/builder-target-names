@@ -4,7 +4,7 @@
   "sourceRoot": "js-libs/jsltsc2/src",
   "projectType": "library",
   "targets": {
-    "build": {
+    "my-build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {

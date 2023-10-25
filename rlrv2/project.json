@@ -12,7 +12,7 @@
         "lintFilePatterns": ["rlrv2/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "build": {
+    "my-build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",

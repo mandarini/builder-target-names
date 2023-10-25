@@ -6,7 +6,7 @@
   "tags": [],
   "projectType": "library",
   "targets": {
-    "build": {
+    "my-build": {
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {

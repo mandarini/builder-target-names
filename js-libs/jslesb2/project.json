@@ -4,7 +4,7 @@
   "sourceRoot": "js-libs/jslesb2/src",
   "projectType": "library",
   "targets": {
-    "build": {
+    "my-build": {
       "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
