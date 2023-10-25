@@ -1,0 +1,32 @@
+{
+  "name": "jslr2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "js-libs/jslr2/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/js-libs/jslr2",
+        "main": "js-libs/jslr2/src/index.ts",
+        "tsConfig": "js-libs/jslr2/tsconfig.lib.json",
+        "assets": [],
+        "project": "js-libs/jslr2/package.json",
+        "compiler": "swc",
+        "format": ["cjs", "esm"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "js-libs/jslr2/**/*.ts",
+          "js-libs/jslr2/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

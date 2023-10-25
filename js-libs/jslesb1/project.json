@@ -1,0 +1,31 @@
+{
+  "name": "jslesb1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "js-libs/jslesb1/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/js-libs/jslesb1",
+        "main": "js-libs/jslesb1/src/index.ts",
+        "tsConfig": "js-libs/jslesb1/tsconfig.lib.json",
+        "assets": ["js-libs/jslesb1/*.md"],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "js-libs/jslesb1/**/*.ts",
+          "js-libs/jslesb1/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

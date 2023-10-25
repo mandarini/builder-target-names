@@ -1,0 +1,29 @@
+{
+  "name": "jsltsc1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "js-libs/jsltsc1/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/js-libs/jsltsc1",
+        "main": "js-libs/jsltsc1/src/index.ts",
+        "tsConfig": "js-libs/jsltsc1/tsconfig.lib.json",
+        "assets": ["js-libs/jsltsc1/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "js-libs/jsltsc1/**/*.ts",
+          "js-libs/jsltsc1/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

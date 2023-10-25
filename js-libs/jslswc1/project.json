@@ -1,0 +1,29 @@
+{
+  "name": "jslswc1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "js-libs/jslswc1/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/js-libs/jslswc1",
+        "main": "js-libs/jslswc1/src/index.ts",
+        "tsConfig": "js-libs/jslswc1/tsconfig.lib.json",
+        "assets": ["js-libs/jslswc1/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "js-libs/jslswc1/**/*.ts",
+          "js-libs/jslswc1/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
