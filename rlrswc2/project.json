@@ -1,0 +1,36 @@
+{
+  "name": "rlrswc2",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "rlrswc2/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["rlrswc2/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/rlrswc2",
+        "tsConfig": "rlrswc2/tsconfig.lib.json",
+        "project": "rlrswc2/package.json",
+        "entryFile": "rlrswc2/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "swc",
+        "assets": [
+          {
+            "glob": "rlrswc2/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

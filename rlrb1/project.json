@@ -1,0 +1,36 @@
+{
+  "name": "rlrb1",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "rlrb1/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["rlrb1/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/rlrb1",
+        "tsConfig": "rlrb1/tsconfig.lib.json",
+        "project": "rlrb1/package.json",
+        "entryFile": "rlrb1/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "rlrb1/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

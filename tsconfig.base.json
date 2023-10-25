@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@myorg/rlrb1": ["rlrb1/src/index.ts"],
+      "@myorg/rlrb2": ["rlrb2/src/index.ts"],
+      "@myorg/rlrswc1": ["rlrswc1/src/index.ts"],
+      "@myorg/rlrswc2": ["rlrswc2/src/index.ts"],
+      "@myorg/rlv1": ["rlrv1/src/index.ts"],
+      "@myorg/rlv2": ["rlrv2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
